@@ -147,7 +147,7 @@
     </div></div>
     <p class="s-note">В обычный комплект входят снятие и установка, перебортировка и балансировка. Микроавтобусы – по прайсу кроссоверов. RunFlat, низкий профиль, шины с индексом «С» и грязевая резина – плюс 1000 ₽. Цена зависит от класса машины, точную назовём на месте до начала мойки. Запись принимаем только на шиномонтаж, на мойку заезжайте без записи.</p>
       <div class="s-pricelists" id="pricelists">
-      <h3 class="s-pricelists__title">Прайс-листы, сентябрь 2026</h3>
+      <h3 class="s-pricelists__title">Прайс-листы</h3>
       <p class="s-pricelists__hint">Нажмите на лист, чтобы открыть его крупно.</p>
       <ul class="s-pricelists__grid">
         <li><a class="s-pricelist" href="assets/prajs-shinomontazh.webp" data-lightbox="Прайс-лист на шиномонтаж"><img src="assets/prajs-shinomontazh.webp" alt="Прайс-лист на шиномонтаж: легковые автомобили, кроссоверы, внедорожники и микроавтобусы по размерам колёс, дополнительные работы" loading="lazy" decoding="async" width="842" height="1274"><span>Шиномонтаж: легковые, кроссоверы, доп. работы</span></a></li>
@@ -282,6 +282,27 @@
     var t = e.target; while (t && t !== document) { if (t.getAttribute && t.getAttribute('data-lightbox') !== null && t.tagName === 'A') { e.preventDefault(); open(t); return; } t = t.parentNode; }
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+<script data-eyebrow-fit>
+(function () {
+  var el = document.querySelector('.s-eyebrow');
+  if (!el || !el.firstChild) return;
+  var MAX = 33.6, MIN = 10;
+  function fit() {
+    el.style.fontSize = MAX + 'px';
+    var r = document.createRange(); r.selectNodeContents(el.firstChild);
+    var tw = r.getBoundingClientRect().width, cw = el.clientWidth;
+    if (!tw || !cw) return;
+    var s = MAX * cw / tw * 0.985;
+    if (s > MAX) s = MAX; if (s < MIN) s = MIN;
+    el.style.fontSize = s + 'px';
+  }
+  fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  if (window.ResizeObserver) new ResizeObserver(fit).observe(el.parentNode);
 })();
 </script>
 </body>

@@ -438,3 +438,7 @@ html.s-lb-open { overflow: hidden; }
 @media (min-width: 900px) { .s-lb img { width: auto; max-width: 100%; max-height: calc(100vh - 24px); } }
 .s-lb__close { position: fixed; top: calc(10px + env(safe-area-inset-top)); right: calc(12px + env(safe-area-inset-right)); width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .92); color: #111; font: 400 2rem/1 var(--f-text); cursor: pointer; }
 /* прайс-листы: конец */
+
+/* строка в одну линию: начало */
+.s-eyebrow { white-space: nowrap; overflow: hidden; font-size: clamp(1rem, 4.4vw, 1.9rem); }
+/* строка в одну линию: конец */
