@@ -295,8 +295,8 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
 /* подвал: конец */
 
 /* светлые полосы: начало */
-.s-light { --c-canvas: #faf6f1; --c-surface: #ffffff; --c-ink: #22201d; --c-ink-soft: #625b53; --c-accent: #DC546A; --c-accent-ink: #1d0f04; --c-accent-deep: #B63A52;
-  --hair: color-mix(in srgb, #22201d 14%, transparent); --tint: color-mix(in srgb, #DC546A 12%, #fff); --shadow: 0 18px 50px -22px rgba(60, 35, 10, .35);
+.s-light { --c-canvas: #faf6f1; --c-surface: #ffffff; --c-ink: #22201d; --c-ink-soft: #625b53; --c-accent: #D80E06; --c-accent-ink: #FFFFFF; --c-accent-deep: #D80E06;
+  --hair: color-mix(in srgb, #22201d 14%, transparent); --tint: color-mix(in srgb, #D80E06 12%, #fff); --shadow: 0 18px 50px -22px rgba(60, 35, 10, .35);
   position: relative; isolation: isolate; color: var(--c-ink); margin-top: clamp(56px, 8vw, 96px); padding-top: clamp(48px, 6vw, 80px); padding-bottom: clamp(48px, 6vw, 80px); }
 .s-light::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); background: var(--c-canvas); z-index: -1; }
 .s-light--cont { margin-top: 0; padding-top: 0; }
@@ -342,13 +342,13 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
 /* старые iPhone: начало */
 .s-chip.is-checked { border-color: var(--c-accent); background: var(--tint); }
 @supports not (color: color-mix(in srgb, red 50%, blue)) {
-  :root { --hair: rgba(241, 237, 228, .14); --tint: #2c1f2a; --shadow: 0 18px 50px -18px rgba(0, 0, 0, .55); }
-  .s-light { --hair: rgba(34, 32, 29, .14); --tint: #fbebed; --shadow: 0 18px 50px -22px rgba(60, 35, 10, .35); }
+  :root { --hair: rgba(241, 237, 228, .14); --tint: #2C171E; --shadow: 0 18px 50px -18px rgba(0, 0, 0, .55); }
+  .s-light { --hair: rgba(34, 32, 29, .14); --tint: #FAE2E1; --shadow: 0 18px 50px -22px rgba(60, 35, 10, .35); }
   .s-bar { background: rgba(11, 13, 17, .88); }
   .s-dock { background: rgba(11, 13, 17, .92); }
   .s-hero__bg::after { background: linear-gradient(180deg, rgba(11, 13, 17, .4), #0b0d11 96%); }
   .s-reviews__stars { color: rgba(34, 32, 29, .18); }
-  .s-rating a { text-decoration-color: rgba(220, 84, 106, .7); }
+  .s-rating a { text-decoration-color: rgba(216, 14, 6, .7); }
 }
 /* старые iPhone: конец */
 
