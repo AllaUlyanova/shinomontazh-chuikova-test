@@ -399,7 +399,7 @@ html { -webkit-tap-highlight-color: transparent; }
   .s-lead { font-size: 1rem; margin-top: 12px; }
 }
 @media (orientation: landscape) and (max-height: 520px) and (min-width: 780px) {
-  .s-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 22rem); gap: 28px; }
+  .s-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 24rem); gap: 28px; }
   .s-hero__widget { position: static; }
 }
 
@@ -441,4 +441,7 @@ html.s-lb-open { overflow: hidden; }
 
 /* строка в одну линию: начало */
 .s-eyebrow { white-space: nowrap; overflow: hidden; font-size: clamp(1rem, 4.4vw, 1.9rem); }
+.s-hero__text, .s-hero__widget { min-width: 0; }
+.s-eyebrow { max-width: 100%; }
+@supports not (overflow-x: clip) { html, body { overflow-x: hidden; } }
 /* строка в одну линию: конец */
